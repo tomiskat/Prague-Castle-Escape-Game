@@ -3,7 +3,7 @@
 **Prague Castle Escape** is an immersive outdoor mobile game that takes players on a thrilling quest for the Holy Grail. Designed for adventure seekers, history enthusiasts, and puzzle lovers, this game combines a rich historical setting with engaging gameplay.  
 
 ## 🌟 Features  
-- **Explore Iconic Locations**: Navigate through the majestic Prague Castle, the Royal Gardens, and the Valdštejn Garden.  
+- **Explore Iconic Locations**: Navigate through the majestic Prague Castle Royal Gardens, and the Valdštejn Garden.  
 - **Solve Captivating Puzzles**: Test your wits with a variety of challenging tasks and riddles.  
 - **Join an Iconic Character**: Team up with a legendary figure to uncover the secrets of the Holy Grail.  
 - **Completely Free**: Enjoy the full experience without any cost—download it now on Google Play!  
