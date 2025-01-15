@@ -1,4 +1,4 @@
-# Prague Castle Escape 🎮  
+# Prague Castle Escape Game 🎮  
 
 **Prague Castle Escape** is an immersive outdoor mobile game that takes players on a thrilling quest for the Holy Grail. Designed for adventure seekers, history enthusiasts, and puzzle lovers, this game combines a rich historical setting with engaging gameplay.  
 
