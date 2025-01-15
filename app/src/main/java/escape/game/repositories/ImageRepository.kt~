@@ -1,4 +1,0 @@
-package escape.game.repositories
-
-class ImageRepository {
-}
