@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Escape Game</string>
+    <string name="start_game">Start Game</string>
+    <string name="distance">You are %1$d meters away</string>
+    <string name="location_permission_title">Location Required</string>
+    <string name="location_permission_text">This app requires fine location access to function properly.</string>
+    <string name="to_settings">Go to settings</string>
+    <string name="fragment_name">escape.game.fragments.GameFragment</string>
+    <string name="empty_string" />
+    <string name="continue_button">Continue</string>
+    <string name="distance_reached">You are there</string>
+    <string name="throw_coin">Throw Coin</string>
+    <string name="task">Image for task</string>
+    <string name="explore_gate">Explore gate</string>
+    <string name="meet_trolls">Meet Trolls</string>
+    <string name="ask_troll">Ask Troll</string>
+    <string name="explore_statues">Explore statues</string>
+    <string name="wake_up_hatter">Wake up Hatter</string>
+    <string name="explore_statue">Explore statue</string>
+    <string name="meet_mirror_man">Meet Mirror Man</string>
+    <string name="accept_challenge">Accept challenge</string>
+    <string name="ask_for_hat">Ask for hat</string>
+    <string name="left_one">Left One</string>
+    <string name="middle_one">Middle One</string>
+    <string name="right_one">Right One</string>
+    <string name="offer_exchange">Offer exchange</string>
+    <string name="cigar">Cigar</string>
+    <string name="pepperoni">Pepperoni</string>
+    <string name="vodka">Vodka</string>
+    <string name="meet_knights">Meet knights</string>
+    <string name="team_name">Team name</string>
+    <string name="save_result">Save result</string>
+    <string name="game_duration">Duration: %1$d min %2$d s</string>
+    <string name="storing_error">Storing error</string>
+    <string name="ok">OK</string>
+    <string name="save_QRCode">Save QRCode</string>
+</resources>

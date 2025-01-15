@@ -1,0 +1,10 @@
+{
+  "id": 5,
+  "title": "Singing Fountain",
+  "description": "Offer the right coin to the fountain. It will reveal its secret, unlocking the next step in your quest.",
+  "correctAnswer": "",
+  "location": {
+    "latitude": 50.093612,
+    "longitude": 14.404726
+  }
+}

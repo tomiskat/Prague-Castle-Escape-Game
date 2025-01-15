@@ -1,0 +1,10 @@
+{
+  "id": 20,
+  "title": "",
+  "description": "Thanks for saving me! I have good news, I found the Holy Grail's final location! But I lost my hat, and we can't make such discovery without it. Luckily, there's a man nearby who might lend me his. Let's go ask him.",
+  "correctAnswer": "",
+  "location": {
+    "latitude": 50.089135,
+    "longitude": 14.402870
+  }
+}

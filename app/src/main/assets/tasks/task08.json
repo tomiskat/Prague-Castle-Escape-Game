@@ -1,0 +1,10 @@
+{
+  "id": 8,
+  "title": "Locked Gate",
+  "description": "",
+  "correctAnswer": "SWORD",
+  "location": {
+    "latitude": 0.0,
+    "longitude": 0.0
+  }
+}

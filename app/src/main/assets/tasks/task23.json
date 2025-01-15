@@ -1,0 +1,10 @@
+{
+  "id": 23,
+  "title": "",
+  "description": "To obtain the Holy Grail, sum our ages. The oldest’s age is the reverse of the youngest’s. The total is under 100, all ages give the same remainder when divided by 4, and the middle one’s age is not prime.",
+  "correctAnswer": "93",
+  "location": {
+    "latitude": 0,
+    "longitude": 0
+  }
+}
