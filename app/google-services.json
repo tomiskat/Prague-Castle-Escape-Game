@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "881766941895",
+    "project_id": "prague-castle-escape",
+    "storage_bucket": "prague-castle-escape.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881766941895:android:84b0be56ba391eca76eae2",
+        "android_client_info": {
+          "package_name": "prague.castle.escape"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRxCGMneI-35waYcooFu7sd16vy-p_dg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
