@@ -32,7 +32,7 @@
 
         <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/image"
-            android:src="@drawable/task26"
+            android:src="@drawable/task26_eu"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:contentDescription="@string/task"
@@ -43,13 +43,26 @@
 
         <Button
             android:backgroundTint="@color/button_background"
+            android:id="@+id/change_QRCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@string/show_CZ_QRCode"
+            android:enabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_guideline"
+            app:layout_constraintBottom_toTopOf="@+id/save_QRCode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:backgroundTint="@color/button_background"
             android:id="@+id/save_QRCode"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:text="@string/save_QRCode"
             android:enabled="true"
-            app:layout_constraintTop_toBottomOf="@+id/bottom_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/change_QRCode"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -66,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.8"/>
+            app:layout_constraintGuide_percent="0.75"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -58,6 +58,7 @@ open class GameFragment : Fragment() {
     private var resultTextView: TextView? = null
     private var editText: EditText? = null
     private var saveResultButton: Button? = null
+    private var changeQRCodeButton: Button? = null
     private var saveQRCodeButton: Button? = null
 
     private var enabledColor: ColorStateList? = null
@@ -104,6 +105,7 @@ open class GameFragment : Fragment() {
         resultTextView = view.findViewById(R.id.result)
         editText = view.findViewById(R.id.edit)
         saveResultButton = view.findViewById(R.id.save_result)
+        changeQRCodeButton = view.findViewById(R.id.change_QRCode)
         saveQRCodeButton = view.findViewById(R.id.save_QRCode)
     }
 
@@ -180,8 +182,11 @@ open class GameFragment : Fragment() {
         addChoiceButtonListener()
         addEditTextListener()
         addSaveResultButtonListener()
+        addChangeQRCodeButtonListener()
         addSaveQRCodeButtonListener()
     }
+
+
 
     private fun addConfirmButtonListener() {
         confirmButton?.setOnClickListener {
@@ -246,7 +251,19 @@ open class GameFragment : Fragment() {
             saveResultButton?.isEnabled = false
             editText?.visibility = View.GONE
             loadingScaly?.visibility = View.VISIBLE
-            gameViewModel.storeResult(editText?.text.toString().trim())
+            gameViewModel.saveResult(editText?.text.toString().trim())
+        }
+    }
+
+    private fun addChangeQRCodeButtonListener() {
+        changeQRCodeButton?.setOnClickListener {
+            if (changeQRCodeButton?.text == getString(R.string.show_CZ_QRCode)) {
+                photoView?.setImageResource(R.drawable.task26_cz)
+                changeQRCodeButton?.text = getString(R.string.show_EU_QRCode)
+                return@setOnClickListener
+            }
+            photoView?.setImageResource(R.drawable.task26_eu)
+            changeQRCodeButton?.text = getString(R.string.show_CZ_QRCode)
         }
     }
 
@@ -254,7 +271,7 @@ open class GameFragment : Fragment() {
         saveQRCodeButton?.setOnClickListener {
             val bitmap = (photoView?.drawable as BitmapDrawable).bitmap
             val contentValues = ContentValues().apply {
-                put(MediaStore.Images.Media.DISPLAY_NAME, "escape_game_qr.jpg")
+                put(MediaStore.Images.Media.DISPLAY_NAME, "prague_castle_escape_qr.jpg")
                 put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
                 put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES)
             }

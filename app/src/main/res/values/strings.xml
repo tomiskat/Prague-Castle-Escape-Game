@@ -33,4 +33,6 @@
     <string name="storing_error">Storing error</string>
     <string name="ok">OK</string>
     <string name="save_QRCode">Save QR-Code</string>
+    <string name="show_EU_QRCode">EU QR-Code</string>
+    <string name="show_CZ_QRCode">Czech QR-Code</string>
 </resources>

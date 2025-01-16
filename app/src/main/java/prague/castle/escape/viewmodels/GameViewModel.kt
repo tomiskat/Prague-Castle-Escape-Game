@@ -1,7 +1,6 @@
 package prague.castle.escape.viewmodels
 
 import android.location.Location
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -146,18 +145,12 @@ class GameViewModel(
     }
 
     private fun onStoringFailure(exception: Exception) {
-        if (exception.message?.equals(Constants.NAME_ALREADY_EXISTS)) {
-            _storingError.postValue(Constants.NAME_ALREADY_EXISTS)
-            return
-        }
-        Log.e("GameViewModel", "Error storing result: ${exception.message}")
-        Log.e("GameViewModel", "Error storing result: ${exception.stackTrace}")
-        _storingError.postValue(Constants.DATABASE_ERROR)
+        val errorMessage = Constants.FIREBASE_ERROR_TO_USER_MESSAGE[exception.message] ?: Constants.UNSPECIFIED_STORAGE_ERROR
+        _storingError.postValue(errorMessage)
     }
 
-
-    fun storeResult(teamName: String) {
-        FirebaseManager.storeResult(teamName, getGameData(), ::onStoringSuccess, ::onStoringFailure)
+    fun saveResult(teamName: String) {
+        FirebaseManager.saveResult(teamName, getGameData(), ::onStoringSuccess, ::onStoringFailure)
     }
 
     fun clearStoringError() {
