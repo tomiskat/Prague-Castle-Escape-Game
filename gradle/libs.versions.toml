@@ -6,6 +6,7 @@ firebaseBom = "33.7.0"
 fragmentKtx = "1.8.5"
 githubPinview = "v1.4"
 gson = "2.11.0"
+integrity = "1.4.0"
 kotlin = "1.9.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -24,6 +25,7 @@ pinview = "1.8"
 pinviewVersion = "1.4.4"
 playServicesLocation = "21.3.0"
 pubEasypermissions = "3.0.0"
+securityCrypto = "1.1.0-alpha06"
 uiDesktop = "1.7.0"
 firebaseFirestoreKtx = "25.1.1"
 firebaseDatabaseKtx = "21.0.0"
@@ -31,6 +33,7 @@ firebaseFirestore = "25.1.1"
 firebaseDatabase = "21.0.0"
 googleGmsGoogleServices = "4.4.2"
 playServicesLocationVersion = "21.3.0"
+securityCryptoKtx = "1.0.0"
 
 [libraries]
 android-loading-dots = { module = "com.github.razaghimahdi:Android-Loading-Dots", version.ref = "androidLoadingDots" }
@@ -39,13 +42,17 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3Version" }
+androidx-security-crypto = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
 chaosleung-pinview = { module = "io.github.chaosleung:pinview", version.ref = "pinviewVersion" }
 chrisbanes-photoview = { module = "com.github.chrisbanes:PhotoView", version.ref = "photoviewVersion" }
 easypermissions = { module = "com.github.marcoscgdev:EasyPermissions", version.ref = "easypermissions" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-appcheck = { module = "com.google.firebase:firebase-appcheck" }
+firebase-appcheck-playintegrity = { module = "com.google.firebase:firebase-appcheck-playintegrity" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 goodiebag-pinview = { module = "com.github.GoodieBag:Pinview", version.ref = "githubPinview" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+integrity = { module = "com.google.android.play:integrity", version.ref = "integrity" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

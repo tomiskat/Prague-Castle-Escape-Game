@@ -37,23 +37,33 @@ android {
 }
 
 dependencies {
-    implementation(libs.pub.easypermissions)
+    // Google play integrity, gson and location
+    implementation(libs.integrity)
+    implementation(libs.gson)
+    implementation(libs.play.services.location)
+    implementation(libs.androidx.security.crypto)
+
+    // ui and improved ui
+    implementation(libs.material)
     implementation(libs.chrisbanes.photoview)
     implementation(libs.android.loading.dots)
     implementation(libs.chaosleung.pinview)
-    implementation(libs.gson)
+
+    // kotlin
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.ui.desktop)
-    implementation(libs.firebase.firestore.ktx)
-    implementation(libs.firebase.database.ktx)
+
+    // firebase
+    implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.database)
-    implementation(libs.play.services.location)
+    implementation(libs.firebase.appcheck.playintegrity)
+
+    // testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
