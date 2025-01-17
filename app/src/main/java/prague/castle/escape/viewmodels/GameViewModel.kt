@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.android.gms.location.FusedLocationProviderClient
-import prague.castle.escape.managers.LocationManagerImpl
+import prague.castle.escape.utils.LocationManager
 import prague.castle.escape.models.LocationData
 import prague.castle.escape.models.Task
 import prague.castle.escape.repositories.GameRepository
@@ -21,7 +21,7 @@ class GameViewModel(
 
 
     private lateinit var _tasks: List<Task>
-    private lateinit var _locationManagerImpl: LocationManagerImpl
+    private lateinit var _locationManager: LocationManager
 
     private var _taskID = 0
     private var _gameStartTime = 0L
@@ -71,16 +71,16 @@ class GameViewModel(
     }
 
     fun startLocationUpdates() {
-        _locationManagerImpl.startLocationUpdates()
+        _locationManager.startLocationUpdates()
     }
 
     fun stopLocationUpdates() {
-        _locationManagerImpl.stopLocationUpdates()
+        _locationManager.stopLocationUpdates()
     }
 
     private fun loadLocationManager() {
-        _locationManagerImpl =
-            LocationManagerImpl(fusedLocationClient) { location -> updateDistance(location) }
+        _locationManager =
+            LocationManager(fusedLocationClient) { location -> updateDistance(location) }
     }
 
     fun checkAnswer(playerAnswer: String) {

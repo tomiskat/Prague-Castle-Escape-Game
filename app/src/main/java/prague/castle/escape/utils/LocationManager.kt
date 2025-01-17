@@ -1,4 +1,4 @@
-package prague.castle.escape.managers
+package prague.castle.escape.utils
 
 import android.annotation.SuppressLint
 import android.location.Location
@@ -7,13 +7,11 @@ import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.Priority
-import prague.castle.escape.utils.Constants
 
-class LocationManagerImpl(
+class LocationManager(
     private val fusedLocationClient: FusedLocationProviderClient,
     private val locationUpdateCallback: (Location) -> Unit
-) :
-    LocationManager {
+) {
 
     private var locationRequest: LocationRequest =
         LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, Constants.LOCATION_INTERVAL_UPDATE)
@@ -30,11 +28,11 @@ class LocationManagerImpl(
 
     // Permission checked in the GameActivity
     @SuppressLint("MissingPermission")
-    override fun startLocationUpdates() {
+    fun startLocationUpdates() {
         fusedLocationClient.requestLocationUpdates(locationRequest, locationCallbackImpl, null)
     }
 
-    override fun stopLocationUpdates() {
+    fun stopLocationUpdates() {
         fusedLocationClient.removeLocationUpdates(locationCallbackImpl)
     }
 }
