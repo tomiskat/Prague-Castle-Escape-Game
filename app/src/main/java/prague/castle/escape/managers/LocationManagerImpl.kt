@@ -7,15 +7,20 @@ import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.Priority
-import prague.castle.escape.utils.Constants.LOCATION_INTERVAL_UPDATE
+import prague.castle.escape.utils.Constants
 
-class LocationManagerImpl(private val fusedLocationClient: FusedLocationProviderClient, private val locationUpdateCallback: (Location) -> Unit) :
+class LocationManagerImpl(
+    private val fusedLocationClient: FusedLocationProviderClient,
+    private val locationUpdateCallback: (Location) -> Unit
+) :
     LocationManager {
 
-    private var locationRequest: LocationRequest = LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, LOCATION_INTERVAL_UPDATE).apply {
-        setMinUpdateIntervalMillis(LOCATION_INTERVAL_UPDATE)
-        setWaitForAccurateLocation(true)
-    }.build()
+    private var locationRequest: LocationRequest =
+        LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, Constants.LOCATION_INTERVAL_UPDATE)
+            .apply {
+                setMinUpdateIntervalMillis(Constants.LOCATION_INTERVAL_UPDATE)
+                setWaitForAccurateLocation(true)
+            }.build()
 
     private val locationCallbackImpl = object : LocationCallback() {
         override fun onLocationResult(locationResult: LocationResult) {

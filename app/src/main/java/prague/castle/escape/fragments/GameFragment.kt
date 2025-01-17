@@ -29,7 +29,6 @@ import com.google.android.material.chip.ChipGroup
 import com.razzaghimahdi78.dotsloading.linear.LoadingScaly
 import prague.castle.escape.R
 import prague.castle.escape.utils.Constants
-import prague.castle.escape.utils.Constants.DISTANCE_TO_TASK
 import prague.castle.escape.utils.ImageSaver
 import prague.castle.escape.viewmodels.GameViewModel
 import prague.castle.escape.views.ClickableTextView
@@ -51,7 +50,7 @@ open class GameFragment : Fragment() {
     private var photoView: PhotoView? = null
     private var pinView: PinView? = null
     private var chipGroup: ChipGroup? = null
-    private var choiceButton : Button? = null
+    private var choiceButton: Button? = null
     private var loadingScaly: LoadingScaly? = null
     private var distanceTextView: TextView? = null
     private var confirmButton: Button? = null
@@ -66,7 +65,8 @@ open class GameFragment : Fragment() {
     private val gameViewModel: GameViewModel by activityViewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? {
         val fragmentNumber = arguments?.getString("fragmentNumber")
         val layoutId = fragmentNumber?.let { getLayoutId(it) }
         return layoutId?.let { inflater.inflate(it, container, false) }
@@ -112,7 +112,12 @@ open class GameFragment : Fragment() {
     private fun setupTaskDetails() {
         val currentTask = gameViewModel.task.value
         titleTextView?.text = currentTask?.title
-        descriptionTextView?.text = currentTask?.description?.let { HtmlCompat.fromHtml(it, HtmlCompat.FROM_HTML_MODE_LEGACY) }
+        descriptionTextView?.text = currentTask?.description?.let {
+            HtmlCompat.fromHtml(
+                it,
+                HtmlCompat.FROM_HTML_MODE_LEGACY
+            )
+        }
         resultTextView?.text = gameViewModel.getGameDurationText()
     }
 
@@ -129,7 +134,7 @@ open class GameFragment : Fragment() {
                 loadingScaly?.visibility = View.GONE
 
                 // show distance text
-                if (distance < DISTANCE_TO_TASK) {
+                if (distance < Constants.DISTANCE_TO_TASK) {
                     distanceTextView?.setText(R.string.distance_reached)
                     confirmButton?.isEnabled = true
                     confirmButton?.backgroundTintList = enabledColor
@@ -172,7 +177,8 @@ open class GameFragment : Fragment() {
             .show()
 
         // Change color of the button to white
-        alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)?.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
+        alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)
+            ?.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
     }
 
     private fun addListeners() {
@@ -185,7 +191,6 @@ open class GameFragment : Fragment() {
         addChangeQRCodeButtonListener()
         addSaveQRCodeButtonListener()
     }
-
 
 
     private fun addConfirmButtonListener() {
@@ -238,9 +243,21 @@ open class GameFragment : Fragment() {
         }
 
         editText?.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(charSequence: CharSequence?, start: Int, before: Int, after: Int) {}
+            override fun beforeTextChanged(
+                charSequence: CharSequence?,
+                start: Int,
+                before: Int,
+                after: Int
+            ) {
+            }
+
             override fun afterTextChanged(editable: Editable?) {}
-            override fun onTextChanged(charSequence: CharSequence?, start: Int, before: Int, after: Int) {
+            override fun onTextChanged(
+                charSequence: CharSequence?,
+                start: Int,
+                before: Int,
+                after: Int
+            ) {
                 saveResultButton?.isEnabled = !charSequence?.trim().isNullOrEmpty()
             }
         })
@@ -280,11 +297,18 @@ open class GameFragment : Fragment() {
     }
 
     private fun hasLocationPermission(): Boolean {
-        return ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+        return ContextCompat.checkSelfPermission(
+            requireContext(),
+            Manifest.permission.ACCESS_FINE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED
     }
 
     private fun requestLocationPermission() {
-        ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), Constants.LOCATION_PERMISSION_REQUEST_CODE)
+        ActivityCompat.requestPermissions(
+            requireActivity(),
+            arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+            Constants.LOCATION_PERMISSION_REQUEST_CODE
+        )
     }
 
     override fun onResume() {

@@ -78,10 +78,16 @@ class GameActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        Log.e("GameActivity", "onRequestPermissionsResult")
-        if (requestCode == Constants.LOCATION_PERMISSION_REQUEST_CODE && grantResults.isNotEmpty() && grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+        if (requestCode == Constants.LOCATION_PERMISSION_REQUEST_CODE
+            && grantResults.isNotEmpty()
+            && grantResults[0] != PackageManager.PERMISSION_GRANTED
+        ) {
             displayPermissionDialog()
         }
     }
@@ -100,12 +106,12 @@ class GameActivity : AppCompatActivity() {
             .show()
 
         // Change color of the button to white
-        permissionDialog?.getButton(AlertDialog.BUTTON_POSITIVE)?.setTextColor(ContextCompat.getColor(this, R.color.white))
+        permissionDialog?.getButton(AlertDialog.BUTTON_POSITIVE)
+            ?.setTextColor(ContextCompat.getColor(this, R.color.white))
     }
 
     override fun onStop() {
         super.onStop()
-        Log.e("GameActivity", "onStop")
         permissionDialog?.dismiss()
     }
 }

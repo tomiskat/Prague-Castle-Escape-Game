@@ -38,15 +38,30 @@ object GameManager {
     }
 
     fun saveGameStartTime(context: Context, gameStartTime: Long) {
-        getEncryptedSharedPreferences(context).editChanges { putLong(KEY_GAME_START_TIME, gameStartTime) }
+        getEncryptedSharedPreferences(context).editChanges {
+            putLong(
+                KEY_GAME_START_TIME,
+                gameStartTime
+            )
+        }
     }
 
     fun saveGameEndTime(context: Context, gameEndTime: Long) {
-        getEncryptedSharedPreferences(context).editChanges { putLong(KEY_GAME_END_TIME, gameEndTime) }
+        getEncryptedSharedPreferences(context).editChanges {
+            putLong(
+                KEY_GAME_END_TIME,
+                gameEndTime
+            )
+        }
     }
 
     fun saveWrongAnswersCount(context: Context, wrongAnswersCount: Int) {
-        getEncryptedSharedPreferences(context).editChanges { putInt(KEY_WRONG_ANSWERS_COUNT, wrongAnswersCount) }
+        getEncryptedSharedPreferences(context).editChanges {
+            putInt(
+                KEY_WRONG_ANSWERS_COUNT,
+                wrongAnswersCount
+            )
+        }
     }
 
     fun getTaskId(context: Context): Int {

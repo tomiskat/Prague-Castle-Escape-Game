@@ -20,7 +20,7 @@ class GameViewModel(
 ) : ViewModel() {
 
 
-    private lateinit var _tasks : List<Task>
+    private lateinit var _tasks: List<Task>
     private lateinit var _locationManagerImpl: LocationManagerImpl
 
     private var _taskID = 0
@@ -79,7 +79,8 @@ class GameViewModel(
     }
 
     private fun loadLocationManager() {
-        _locationManagerImpl = LocationManagerImpl(fusedLocationClient) { location -> updateDistance(location) }
+        _locationManagerImpl =
+            LocationManagerImpl(fusedLocationClient) { location -> updateDistance(location) }
     }
 
     fun checkAnswer(playerAnswer: String) {
@@ -100,8 +101,12 @@ class GameViewModel(
     }
 
     fun nextTask() {
-        if (_taskID == 0) { startGame() }
-        if (_taskID == 23) { endGame() }
+        if (_taskID == 0) {
+            startGame()
+        }
+        if (_taskID == 23) {
+            endGame()
+        }
         gameRepository.saveTaskId(++_taskID)
         _task.value = _tasks[_taskID]
     }
@@ -145,7 +150,8 @@ class GameViewModel(
     }
 
     private fun onStoringFailure(exception: Exception) {
-        val errorMessage = Constants.FIREBASE_ERROR_TO_USER_MESSAGE[exception.message] ?: Constants.UNSPECIFIED_STORAGE_ERROR
+        val errorMessage = Constants.FIREBASE_ERROR_TO_USER_MESSAGE[exception.message]
+            ?: Constants.UNSPECIFIED_STORAGE_ERROR
         _storingError.postValue(errorMessage)
     }
 
