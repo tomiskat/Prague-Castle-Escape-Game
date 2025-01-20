@@ -20,9 +20,7 @@
 - **Puzzle Mechanics**: Custom-designed challenges for an engaging experience.  
 
 ## 🚀 Getting Started  
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/yourusername/prague-castle-escape.git  
+1. Clone the repository  
 2. Open the project in your preferred Android development environment (e.g., Android Studio).  
 3. Build and run the app on a compatible device or emulator.
 4. Beware, the database works only with the original version of the app
