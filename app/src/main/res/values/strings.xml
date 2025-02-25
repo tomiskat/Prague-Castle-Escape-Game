@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Prague Castle Escape</string>
+    <string name="app_name">Prague Escape</string>
     <string name="start_game">Start Game</string>
     <string name="distance">You are %1$d meters away</string>
     <string name="location_permission_title">Location Required</string>
