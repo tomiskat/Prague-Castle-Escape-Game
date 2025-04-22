@@ -4,7 +4,7 @@ object Constants {
     const val LOCATION_PERMISSION_REQUEST_CODE = 123
     const val LOCATION_INTERVAL_UPDATE = 5000L
     const val TASKS_LOCATION = "tasks"
-    const val DISTANCE_TO_TASK = 100_000L
+    const val DISTANCE_TO_TASK = 10L
     const val INCORRECT_ANSWER_PENALTY = 5 * 60_000L
     const val EMPTY_STRING = ""
     const val INCORRECT_ANSWER_MESSAGE = "Incorrect, +5 min"
