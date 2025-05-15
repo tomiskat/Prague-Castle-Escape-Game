@@ -1,10 +1,10 @@
 {
   "id": 7,
   "title": "",
-  "description": "The way to the Grail leads up the stairs on the right, down another set, through the fig grove, and to a gate. To open it, you’ll need a password. Be as sly as a fox to find it.",
+  "description": "The way to the Grail leads up the stairs on the right, down another set, through the fig grove, and to a gate. Be as sly as a fox to open it.",
   "correctAnswer": "",
   "location": {
-    "latitude": 50.093115,
-    "longitude": 14.404637
+    "latitude": 50.093094,
+    "longitude": 14.404636
   }
 }
