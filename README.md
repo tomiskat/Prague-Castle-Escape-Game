@@ -1,6 +1,6 @@
 # Prague Castle Escape 🎮  
 
-[**Prague Castle Escape**](https://sites.google.com/view/prague-castle-escape) is an immersive outdoor mobile game that takes players on a thrilling quest for the Holy Grail. Designed for adventure seekers, history enthusiasts, and puzzle lovers, this game combines a rich historical setting with engaging gameplay.  
+[**Prague Castle Escape**](https://prague-castle-escape.netlify.app) is an immersive outdoor mobile game that takes players on a thrilling quest for the Holy Grail. Designed for adventure seekers, history enthusiasts, and puzzle lovers, this game combines a rich historical setting with engaging gameplay.  
 
 ## 🌟 Features  
 - **Explore Iconic Locations**: Navigate through the majestic Prague Castle Royal Gardens, and the Valdštejn Garden.  
