@@ -52,7 +52,9 @@
             app:layout_constraintTop_toBottomOf="@+id/bottom_guideline"
             app:layout_constraintBottom_toTopOf="@+id/save_QRCode"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
 
         <Button
             android:backgroundTint="@color/button_background"
@@ -65,7 +67,10 @@
             app:layout_constraintTop_toBottomOf="@+id/change_QRCode"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintVertical_chainStyle="packed" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/top_guideline"
